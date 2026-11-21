@@ -60,7 +60,7 @@ main{padding:1.5rem 0 5rem;min-width:0}
 .log{padding:.9rem 1rem;display:flex;flex-direction:column;gap:.9rem}
 .hero .log{height:19rem;overflow:hidden;justify-content:flex-end}
 .msg{display:grid;grid-template-columns:2.4rem 1fr;gap:.75rem}
-.av{width:2.4rem;height:2.4rem;border-radius:50%;display:grid;place-items:center;font-weight:700;color:#fff;font-size:1rem}
+.av{width:2.4rem;height:2.4rem;border-radius:50%;display:grid;place-items:center;font-weight:700;color:#fff;font-size:1rem;object-fit:cover}
 .who{font-weight:600;color:#f2f3f5}
 .who small{font-weight:400;color:var(--dmuted);font-size:.75rem;margin-left:.4rem}
 .badge{background:var(--blurple);color:#fff;font:700 .62rem/1 sans-serif;padding:.18rem .3rem;border-radius:4px;margin-left:.35rem;vertical-align:.12em}
@@ -156,7 +156,7 @@ function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").repl
 function md(s){return esc(s).replace(/`([^`]+)`/g,"<code>$1</code>").replace(/\*\*([^*]+)\*\*/g,"<strong>$1</strong>")}
 function mentions(s){return s.replace(/(@\w+|#[a-z][\w-]*)/g,function(m){return '<span class="mention">'+m+'</span>'})}
 function $(id){return document.getElementById(id)}
-var SAMPLES={user:"@Sam",member:"@Sam",target:"@Sam",channel:"#general",role:"@Moderator",name:"Night Crew",code:"1a4b-2ca1",
+var SAMPLES={user:"@Alex",member:"@Alex",target:"@Alex",channel:"#general",role:"@Moderator",name:"Night Crew",code:"1a4b-2ca1",
   reason:"spamming",time:"10m",duration:"10m",amount:"5",number:"5",count:"5",n:"5",limit:"5",threshold:"3",text:"hello everyone",
   message:"hello everyone",msg:"hello everyone",url:"example.com/image.png",slot:"1",category:"Voice",emoji:"🔥",prize:"Nitro",
   winners:"1",level:"10",color:"#1c7c6e",colour:"#1c7c6e",id:"123456789"};
@@ -165,7 +165,7 @@ function fill(u,pfx){
     var k=inner.split("/")[0].trim().toLowerCase().replace(/\s+/g,"");
     if(k==="message"&&/^giveaway/.test(u))return "1234567890";
     return SAMPLES[k]||k});
-  s=s.replace(/@user\b/gi,"@Sam").replace(/@role\b/gi,"@Moderator").replace(/#channel\b/gi,"#general").replace(/\b([a-z]+)\/[a-z/]+\b/gi,"$1");
+  s=s.replace(/@user\b/gi,"@Alex").replace(/@role\b/gi,"@Moderator").replace(/#channel\b/gi,"#general").replace(/\b([a-z]+)\/[a-z/]+\b/gi,"$1");
   return pfx+s.replace(/\s+/g," ").trim();
 }
 function usageHtml(u,pfx){
@@ -174,8 +174,8 @@ function usageHtml(u,pfx){
 }
 
 /* ---------- chat rendering ---------- */
-function userMsg(text){return '<div class="msg"><div class="av" style="background:#c27c0e">S</div><div class="body"><div class="who">Sam<small>Today at 4:12 PM</small></div>'+mentions(esc(text))+'</div></div>'}
-function botMsg(inner){return '<div class="msg"><div class="av" style="background:var(--teal)">H</div><div class="body"><div class="who">'+esc(DATA?DATA.bot:"Heal")+'<span class="badge">APP</span><small>Today at 4:12 PM</small></div>'+inner+'</div></div>'}
+function userMsg(text){return '<div class="msg"><img class="av" src="avatar.png" alt=""><div class="body"><div class="who">mycliq<small>Today at 4:12 PM</small></div>'+mentions(esc(text))+'</div></div>'}
+function botMsg(inner){return '<div class="msg"><img class="av" src="bot-avatar.png" alt=""><div class="body"><div class="who">'+esc(DATA?DATA.bot:"Heal")+'<span class="badge">APP</span><small>Today at 4:12 PM</small></div>'+inner+'</div></div>'}
 function embed(title,text){return '<div class="embed"><b class="t">'+esc(title)+'</b>'+md(text)+'</div>'}
 function narr(t){return '<div class="narr">'+esc(t)+'</div>'}
 
