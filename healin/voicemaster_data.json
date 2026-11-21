@@ -1,0 +1,69 @@
+{
+  "1560018203042914418": {
+    "hub": 1572570219875012668,
+    "hub2": null,
+    "randomhub": null,
+    "randomcats": [],
+    "categories": [
+      {
+        "id": 1572570218717388821,
+        "prefix": "",
+        "sequential": false
+      }
+    ],
+    "default_name": "{user}'s VC",
+    "autounmute": [
+      null,
+      null
+    ],
+    "temp": {},
+    "interface": 1572570221498343575
+  },
+  "1564353901568991272": {
+    "hub": 1564747715986853981,
+    "hub2": null,
+    "randomhub": null,
+    "randomcats": [],
+    "categories": [
+      {
+        "id": 1564747714875363438,
+        "prefix": "",
+        "sequential": false
+      }
+    ],
+    "default_name": "{user}'s VC",
+    "autounmute": [
+      1564363231038800042,
+      null
+    ],
+    "temp": {}
+  },
+  "1416730736882614294": {
+    "hub": 1572741026706235433,
+    "hub2": 1572742117581791322,
+    "randomhub": 1572741029134729226,
+    "interface": 1572740837484527679,
+    "randomcats": [
+      1572742913211768993,
+      1572743005704687727
+    ],
+    "categories": [
+      {
+        "id": 1572742913211768993,
+        "prefix": "",
+        "sequential": false
+      },
+      {
+        "id": 1572743005704687727,
+        "prefix": "",
+        "sequential": false
+      }
+    ],
+    "default_name": "{user}'s VC",
+    "autounmute": [
+      1572741022767775784,
+      1572741024412082276
+    ],
+    "temp": {}
+  }
+}

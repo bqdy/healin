@@ -1,0 +1,22 @@
+{
+  "1564484110578229393": {
+    "guild_id": 1560018203042914418,
+    "channel_id": 1560018204397543528,
+    "message_id": 1564484110578229393,
+    "host_id": 482506940027502597,
+    "prize": "1 winner",
+    "winners": 1,
+    "end_ts": 1793072538,
+    "status": "ended",
+    "entries": [
+      482506940027502597
+    ],
+    "winner_ids": [
+      482506940027502597
+    ],
+    "roles": [],
+    "thumbnail": null,
+    "image": null,
+    "ended_ts": 1793072525
+  }
+}

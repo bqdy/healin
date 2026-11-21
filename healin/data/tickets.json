@@ -1,0 +1,21 @@
+{
+  "guilds": {
+    "1564353901568991272": {
+      "category_id": 1564751487018471456,
+      "os_role_id": null,
+      "manager_role_id": null,
+      "staff_role_id": null,
+      "log_channel_id": 1564752102662733894,
+      "counter": 4
+    },
+    "1416730736882614294": {
+      "category_id": 1572767545356980256,
+      "os_role_id": null,
+      "manager_role_id": null,
+      "staff_role_id": null,
+      "log_channel_id": null,
+      "counter": 3
+    }
+  },
+  "tickets": {}
+}

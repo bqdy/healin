@@ -1,0 +1,91 @@
+{
+  "1560018203042914418": {
+    "modules": {
+      "webhook": true,
+      "ban": true,
+      "kick": true,
+      "channel": true,
+      "vanity": true,
+      "role": true,
+      "botadd": true
+    },
+    "admins": [],
+    "whitelist": [],
+    "punishment": "ban",
+    "logchannel": null,
+    "window": 10,
+    "limits": {
+      "ban": 3,
+      "kick": 3,
+      "channel": 3,
+      "role": 3,
+      "webhook": 3
+    },
+    "perm_grant": [],
+    "perm_remove": []
+  },
+  "1564353901568991272": {
+    "modules": {
+      "webhook": true,
+      "ban": true,
+      "kick": true,
+      "channel": true,
+      "vanity": true,
+      "role": true,
+      "botadd": true
+    },
+    "admins": [
+      482506940027502597,
+      1532996014028623937,
+      1322775793687855275
+    ],
+    "whitelist": [
+      482506940027502597
+    ],
+    "punishment": "strip",
+    "logchannel": null,
+    "window": 10,
+    "limits": {
+      "ban": 3,
+      "kick": 3,
+      "channel": 3,
+      "role": 3,
+      "webhook": 3
+    },
+    "perm_grant": [
+      "administrator"
+    ],
+    "perm_remove": []
+  },
+  "1416730736882614294": {
+    "modules": {
+      "webhook": true,
+      "ban": true,
+      "kick": true,
+      "channel": true,
+      "vanity": true,
+      "role": true,
+      "botadd": true
+    },
+    "admins": [
+      482506940027502597
+    ],
+    "whitelist": [
+      1075297837916626944
+    ],
+    "punishment": "strip",
+    "logchannel": null,
+    "window": 10,
+    "limits": {
+      "ban": 3,
+      "kick": 3,
+      "channel": 3,
+      "role": 3,
+      "webhook": 3
+    },
+    "perm_grant": [
+      "administrator"
+    ],
+    "perm_remove": []
+  }
+}

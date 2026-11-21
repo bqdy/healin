@@ -1,0 +1,37 @@
+{
+  "1560018203042914418": {
+    "enabled": false,
+    "threshold": 3,
+    "window_minutes": 5,
+    "log_channel_id": null,
+    "ping_role_id": null
+  },
+  "1561905235784376421": {
+    "enabled": false,
+    "threshold": 3,
+    "window_minutes": 5,
+    "log_channel_id": null,
+    "ping_role_id": null
+  },
+  "1564353901568991272": {
+    "enabled": true,
+    "threshold": 3,
+    "window_minutes": 5,
+    "log_channel_id": null,
+    "ping_role_id": null
+  },
+  "1416730736882614294": {
+    "enabled": false,
+    "threshold": 1,
+    "window_minutes": 5,
+    "log_channel_id": null,
+    "ping_role_id": 1572740765795352686
+  },
+  "1535215172317220864": {
+    "enabled": false,
+    "threshold": 3,
+    "window_minutes": 5,
+    "log_channel_id": null,
+    "ping_role_id": null
+  }
+}
