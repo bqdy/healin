@@ -1,0 +1,3819 @@
+{
+ "bot": "Heal",
+ "prefix": "-",
+ "categories": [
+  {
+   "name": "AntiNuke",
+   "slug": "antinuke",
+   "intro": [
+    "Anti-Nuke is always enabled. Individual module settings remain configurable."
+   ],
+   "required": null,
+   "sections": [
+    {
+     "title": "Module Settings (Server Owner or Anti-Nuke trust)",
+     "required": null,
+     "notes": [],
+     "commands": [
+      {
+       "usages": [
+        "antinuke webhook <on/off>"
+       ],
+       "desc": "Prevent mass webhook actions"
+      },
+      {
+       "usages": [
+        "antinuke ban <on/off>"
+       ],
+       "desc": "Prevent mass member bans"
+      },
+      {
+       "usages": [
+        "antinuke kick <on/off>"
+       ],
+       "desc": "Prevent mass member kicks"
+      },
+      {
+       "usages": [
+        "antinuke channel <on/off>"
+       ],
+       "desc": "Protect channels"
+      },
+      {
+       "usages": [
+        "antinuke vanity <on/off>"
+       ],
+       "desc": "Protect the server vanity"
+      },
+      {
+       "usages": [
+        "antinuke role <on/off>"
+       ],
+       "desc": "Protect roles"
+      },
+      {
+       "usages": [
+        "antinuke botadd <on/off>"
+       ],
+       "desc": "Prevent unauthorized bot additions"
+      },
+      {
+       "usages": [
+        "antinuke emoji <on/off>"
+       ],
+       "desc": "Prevent mass emoji and sticker deletion"
+      },
+      {
+       "usages": [
+        "antinuke unban <on/off>"
+       ],
+       "desc": "Prevent mass unbans"
+      },
+      {
+       "usages": [
+        "antinuke prune <on/off>"
+       ],
+       "desc": "Prevent member prunes"
+      },
+      {
+       "usages": [
+        "antinuke integration <on/off>"
+       ],
+       "desc": "Prevent unauthorized integrations"
+      },
+      {
+       "usages": [
+        "antinuke all <on/off>"
+       ],
+       "desc": "Turn every module on or off at once"
+      }
+     ]
+    },
+    {
+     "title": "Information (Anti-Nuke Admin)",
+     "required": null,
+     "notes": [],
+     "commands": [
+      {
+       "usages": [
+        "antinuke config"
+       ],
+       "desc": "View server configuration"
+      },
+      {
+       "usages": [
+        "antinuke admins"
+       ],
+       "desc": "View Anti-Nuke Admins"
+      },
+      {
+       "usages": [
+        "antinuke admin list"
+       ],
+       "desc": "View Anti-Nuke Admins"
+      },
+      {
+       "usages": [
+        "antinuke list"
+       ],
+       "desc": "View modules and whitelisted users"
+      },
+      {
+       "usages": [
+        "an whitelistlist",
+        "wls"
+       ],
+       "desc": "List whitelisted users"
+      },
+      {
+       "usages": [
+        "antinuke limits"
+       ],
+       "desc": "View action limits"
+      },
+      {
+       "usages": [
+        "antinuke health"
+       ],
+       "desc": "Check permissions and hierarchy"
+      },
+      {
+       "usages": [
+        "antinuke status"
+       ],
+       "desc": "Quick overview of protection state"
+      },
+      {
+       "usages": [
+        "antinuke violations [count]"
+       ],
+       "desc": "Recent Anti-Nuke violations"
+      },
+      {
+       "usages": [
+        "antinuke check @user"
+       ],
+       "desc": "See a user's Anti-Nuke standing"
+      },
+      {
+       "usages": [
+        "antinuke botwls"
+       ],
+       "desc": "List whitelisted bots"
+      },
+      {
+       "usages": [
+        "antinuke test"
+       ],
+       "desc": "Send a test message to the log channel"
+      }
+     ]
+    },
+    {
+     "title": "Anti-Nuke Administration",
+     "required": null,
+     "notes": [],
+     "commands": [
+      {
+       "usages": [
+        "an whitelist @user",
+        "wl @user"
+       ],
+       "desc": "Toggle whitelist status"
+      },
+      {
+       "usages": [
+        "antinuke whitelist add @user"
+       ],
+       "desc": "Add to whitelist"
+      },
+      {
+       "usages": [
+        "antinuke whitelist remove @user"
+       ],
+       "desc": "Remove from whitelist"
+      },
+      {
+       "usages": [
+        "an whitelistlist",
+        "wls"
+       ],
+       "desc": "List whitelisted users"
+      },
+      {
+       "usages": [
+        "antinuke whitelist clear confirm"
+       ],
+       "desc": "Empty the whitelist"
+      }
+     ]
+    },
+    {
+     "title": "Server Owner",
+     "required": null,
+     "notes": [],
+     "commands": [
+      {
+       "usages": [
+        "antinuke admin @user"
+       ],
+       "desc": "Add an Anti-Nuke Admin"
+      },
+      {
+       "usages": [
+        "antinuke admin add @user"
+       ],
+       "desc": "Add an Anti-Nuke Admin"
+      },
+      {
+       "usages": [
+        "antinuke admin remove @user"
+       ],
+       "desc": "Remove an Anti-Nuke Admin"
+      },
+      {
+       "usages": [
+        "antinuke admin clear confirm"
+       ],
+       "desc": "Remove every Anti-Nuke Admin"
+      }
+     ]
+    },
+    {
+     "title": "Server Owner Settings",
+     "required": null,
+     "notes": [],
+     "commands": [
+      {
+       "usages": [
+        "antinuke punishment <ban/kick/strip>"
+       ],
+       "desc": "Set punishment"
+      },
+      {
+       "usages": [
+        "antinuke logchannel [#channel]"
+       ],
+       "desc": "Set violation logs"
+      },
+      {
+       "usages": [
+        "antinuke logclear"
+       ],
+       "desc": "Stop logging violations"
+      },
+      {
+       "usages": [
+        "antinuke window <3-60>"
+       ],
+       "desc": "Set detection window"
+      },
+      {
+       "usages": [
+        "antinuke limit <action> <1-20>"
+       ],
+       "desc": "Change an action limit"
+      },
+      {
+       "usages": [
+        "antinuke permissions grant <permission>"
+       ],
+       "desc": "Watch permission grants"
+      },
+      {
+       "usages": [
+        "antinuke permissions remove <permission>"
+       ],
+       "desc": "Watch permission removals"
+      },
+      {
+       "usages": [
+        "antinuke permissions list"
+       ],
+       "desc": "Show watched permissions"
+      },
+      {
+       "usages": [
+        "antinuke permissions clear"
+       ],
+       "desc": "Stop watching all permissions"
+      },
+      {
+       "usages": [
+        "antinuke reset confirm"
+       ],
+       "desc": "Reset Anti-Nuke settings"
+      }
+     ]
+    }
+   ],
+   "count": 43
+  },
+  {
+   "name": "Role Limits",
+   "slug": "role-limits",
+   "intro": [],
+   "required": "Anti-Nuke Admin",
+   "sections": [
+    {
+     "title": "Commands",
+     "required": null,
+     "notes": [],
+     "commands": [
+      {
+       "usages": [
+        "rlimit"
+       ],
+       "desc": "View role-limit settings"
+      },
+      {
+       "usages": [
+        "rlimit @role <number>"
+       ],
+       "desc": "Set a role cap"
+      },
+      {
+       "usages": [
+        "rlimit max <1-100>"
+       ],
+       "desc": "Set maximum roles per member"
+      },
+      {
+       "usages": [
+        "rlimit remove @role"
+       ],
+       "desc": "Remove a role cap"
+      },
+      {
+       "usages": [
+        "rlimit scan"
+       ],
+       "desc": "Remove roles from members who break a limit"
+      },
+      {
+       "usages": [
+        "clear rlimit"
+       ],
+       "desc": "Clear all configured role limits"
+      }
+     ]
+    }
+   ],
+   "count": 6
+  },
+  {
+   "name": "Roles",
+   "slug": "roles",
+   "intro": [],
+   "required": "Manage Roles",
+   "sections": [
+    {
+     "title": "Role Management",
+     "required": null,
+     "notes": [],
+     "commands": [
+      {
+       "usages": [
+        "r @user <role>"
+       ],
+       "desc": "Add or remove a role from a member"
+      },
+      {
+       "usages": [
+        "r @user <role ID>"
+       ],
+       "desc": "Toggle a role by ID"
+      },
+      {
+       "usages": [
+        "r @user <role name>"
+       ],
+       "desc": "Toggle the closest matching role name"
+      },
+      {
+       "usages": [
+        "r @user <role 1>, <role 2>"
+       ],
+       "desc": "Toggle multiple roles at once"
+      },
+      {
+       "usages": [
+        "r <role>"
+       ],
+       "desc": "Toggle one of your own roles"
+      },
+      {
+       "usages": [
+        "role create <name>"
+       ],
+       "desc": "Create a role"
+      },
+      {
+       "usages": [
+        "role rename <role> <name>"
+       ],
+       "desc": "Rename a role"
+      },
+      {
+       "usages": [
+        "role delete <role>"
+       ],
+       "desc": "Delete a role"
+      },
+      {
+       "usages": [
+        "role info <role>",
+        "role members <role>"
+       ],
+       "desc": "View role details or members"
+      },
+      {
+       "usages": [
+        "roleinfo [role]",
+        "ri [role]"
+       ],
+       "desc": "View role details; defaults to your top role"
+      },
+      {
+       "usages": [
+        "role all <role>",
+        "role removeall <role>"
+       ],
+       "desc": "Add or remove a role for everyone"
+      },
+      {
+       "usages": [
+        "role color <color> <role>"
+       ],
+       "desc": "Set a solid role colour"
+      },
+      {
+       "usages": [
+        "role color gradient <first> <second> <role>"
+       ],
+       "desc": "Set a role gradient"
+      },
+      {
+       "usages": [
+        "r icon <emoji> <role>"
+       ],
+       "desc": "Set a Discord role icon"
+      },
+      {
+       "usages": [
+        "inrole <role mention/ID/name>"
+       ],
+       "desc": "List members with a role"
+      },
+      {
+       "usages": [
+        "role humans <role mention/ID/name>"
+       ],
+       "desc": "Give a role to human members"
+      },
+      {
+       "usages": [
+        "role restore @user",
+        "rrs @user"
+       ],
+       "desc": "Restore roles saved when a member left"
+      },
+      {
+       "usages": [
+        "role bots <role> [remove]"
+       ],
+       "desc": "Add/remove a role for bots"
+      },
+      {
+       "usages": [
+        "roles"
+       ],
+       "desc": "List server roles"
+      }
+     ]
+    },
+    {
+     "title": "Booster Roles",
+     "required": null,
+     "notes": [],
+     "commands": [
+      {
+       "usages": [
+        "boosterrole",
+        "br"
+       ],
+       "desc": "View booster-role settings"
+      },
+      {
+       "usages": [
+        "boosterrole create"
+       ],
+       "desc": "Create a personal booster role"
+      },
+      {
+       "usages": [
+        "boosterrole base [@role]"
+       ],
+       "desc": "Set or clear the base booster role"
+      },
+      {
+       "usages": [
+        "boosterrole limit <1-25>"
+       ],
+       "desc": "Set award roles per booster"
+      },
+      {
+       "usages": [
+        "boosterrole list"
+       ],
+       "desc": "View the full booster-role setup"
+      },
+      {
+       "usages": [
+        "boosterrole rename <role> <name>"
+       ],
+       "desc": "Rename a booster role"
+      },
+      {
+       "usages": [
+        "boosterrole remove @user <role>"
+       ],
+       "desc": "Remove a booster role"
+      },
+      {
+       "usages": [
+        "boosterrole cleanup"
+       ],
+       "desc": "Remove deleted award roles from the setup"
+      }
+     ]
+    }
+   ],
+   "count": 27
+  },
+  {
+   "name": "Vanity",
+   "slug": "vanity",
+   "intro": [
+    "Award configured roles when a member's custom status matches your text.",
+    "**Configuration:** Manage Server. The bot needs Manage Roles and a higher role than each award role; enable Presence and Server Members intents."
+   ],
+   "required": null,
+   "sections": [
+    {
+     "title": "Commands",
+     "required": null,
+     "notes": [
+      "This status-role system is separate from the server invite vanity lock."
+     ],
+     "commands": [
+      {
+       "usages": [
+        "vanity"
+       ],
+       "desc": "Show the current matching mode, text, and..."
+      },
+      {
+       "usages": [
+        "vanity set <text>"
+       ],
+       "desc": "Match custom statuses containing this text"
+      },
+      {
+       "usages": [
+        "vanity strict <text>"
+       ],
+       "desc": "Require the entire custom status to match"
+      },
+      {
+       "usages": [
+        "vanity role"
+       ],
+       "desc": "Show role-management guidance"
+      },
+      {
+       "usages": [
+        "vanity role add @role"
+       ],
+       "desc": "Add a status award role"
+      },
+      {
+       "usages": [
+        "vanity role remove @role"
+       ],
+       "desc": "Remove a status award role"
+      },
+      {
+       "usages": [
+        "vanity role list"
+       ],
+       "desc": "List configured award roles"
+      },
+      {
+       "usages": [
+        "vanity sync",
+        "vanity check"
+       ],
+       "desc": "Recheck members and update award roles"
+      },
+      {
+       "usages": [
+        "vanity view",
+        "vanity view substring"
+       ],
+       "desc": "Show matching text and mode"
+      },
+      {
+       "usages": [
+        "vanity view message"
+       ],
+       "desc": "Show the award message"
+      },
+      {
+       "usages": [
+        "vanity message <text>"
+       ],
+       "desc": "Set the award message ({roles} = awarded roles)"
+      }
+     ]
+    }
+   ],
+   "count": 11
+  },
+  {
+   "name": "Aliases",
+   "slug": "aliases",
+   "intro": [],
+   "required": "Manage Server",
+   "sections": [
+    {
+     "title": "Commands",
+     "required": null,
+     "notes": [
+      "Example: `{p}alias add b, ban` lets staff use `{p}b @user reason` as `{p}ban @user reason`.",
+      "Placeholders: `{0}` first argument, `{1}` second argument, `{args}` all arguments."
+     ],
+     "commands": [
+      {
+       "usages": [
+        "alias add <shortcut>, <command>"
+       ],
+       "desc": "Create a shortcut that runs a command"
+      },
+      {
+       "usages": [
+        "alias add bando, r {0} <role ID>"
+       ],
+       "desc": "Use the first argument in a shortcut"
+      },
+      {
+       "usages": [
+        "alias remove <shortcut>"
+       ],
+       "desc": "Delete one shortcut"
+      },
+      {
+       "usages": [
+        "alias removeall <command>"
+       ],
+       "desc": "Delete every shortcut for a command"
+      },
+      {
+       "usages": [
+        "alias view <shortcut>"
+       ],
+       "desc": "View the command behind a shortcut"
+      },
+      {
+       "usages": [
+        "alias list"
+       ],
+       "desc": "List all shortcuts"
+      },
+      {
+       "usages": [
+        "alias reset"
+       ],
+       "desc": "Remove every shortcut"
+      }
+     ]
+    }
+   ],
+   "count": 7
+  },
+  {
+   "name": "Server Configuration",
+   "slug": "server-configuration",
+   "intro": [],
+   "required": null,
+   "sections": [
+    {
+     "title": "Roles",
+     "required": null,
+     "notes": [],
+     "commands": [
+      {
+       "usages": [
+        "reactionrole add <message ID> <emoji> <role>"
+       ],
+       "desc": "Give a role on reaction"
+      },
+      {
+       "usages": [
+        "buttonrole send #channel @role <label>"
+       ],
+       "desc": "Send a role button"
+      }
+     ]
+    },
+    {
+     "title": "Messages",
+     "required": null,
+     "notes": [],
+     "commands": [
+      {
+       "usages": [
+        "autoresponder add trigger, response"
+       ],
+       "desc": "Reply to a trigger"
+      },
+      {
+       "usages": [
+        "automessage add #channel <minutes> <message>"
+       ],
+       "desc": "Schedule a message"
+      },
+      {
+       "usages": [
+        "reactiontrigger add trigger, emoji"
+       ],
+       "desc": "React to a trigger"
+      },
+      {
+       "usages": [
+        "webhook send #channel <name>, <message or {embed} code>"
+       ],
+       "desc": "Send a webhook message"
+      },
+      {
+       "usages": [
+        "welcome add #channel <message or {embed} code>"
+       ],
+       "desc": "Set a join message"
+      },
+      {
+       "usages": [
+        "goodbye add #channel <message or {embed} code>"
+       ],
+       "desc": "Set a leave message"
+      },
+      {
+       "usages": [
+        "boosts add #channel <message or {embed} code>"
+       ],
+       "desc": "Set a boost message"
+      },
+      {
+       "usages": [
+        "embed send #channel <message or {embed} code>"
+       ],
+       "desc": "Send a supported embed"
+      },
+      {
+       "usages": [
+        "pagination send #channel <page 1> || <page 2>"
+       ],
+       "desc": "Send button pagination"
+      }
+     ]
+    },
+    {
+     "title": "Community",
+     "required": null,
+     "notes": [
+      "Use each command with no arguments to see its subcommands."
+     ],
+     "commands": [
+      {
+       "usages": [
+        "starboard set #channel [threshold]"
+       ],
+       "desc": "Configure starred-message reposts"
+      },
+      {
+       "usages": [
+        "counter set #channel <name>"
+       ],
+       "desc": "Update a channel name with member counts"
+      },
+      {
+       "usages": [
+        "honeypot set #channel"
+       ],
+       "desc": "Delete messages sent to a bait channel"
+      },
+      {
+       "usages": [
+        "bumpreminder set #channel [hours]"
+       ],
+       "desc": "Schedule bump reminders"
+      }
+     ]
+    }
+   ],
+   "count": 15
+  },
+  {
+   "name": "Backup",
+   "slug": "backup",
+   "intro": [
+    "Saves every role, category and channel (with their permissions) under a short code, so the server can be rebuilt later. Messages, members, emojis and webhooks are not saved."
+   ],
+   "required": "Server Owner or Anti-Nuke admin",
+   "sections": [
+    {
+     "title": "Commands",
+     "required": null,
+     "notes": [],
+     "commands": [
+      {
+       "usages": [
+        "backup add <name>"
+       ],
+       "desc": "Save this server and get a backup code like `1a4b-2ca1`"
+      },
+      {
+       "usages": [
+        "backup load <code>"
+       ],
+       "desc": "Restore a backup. **This deletes every channel and role first**, and asks you to type `yes` to confirm"
+      },
+      {
+       "usages": [
+        "backup list"
+       ],
+       "desc": "Show your saved backups"
+      },
+      {
+       "usages": [
+        "backup delete <code>"
+       ],
+       "desc": "Delete a saved backup"
+      }
+     ]
+    },
+    {
+     "title": "Tips",
+     "required": null,
+     "notes": [
+      "Keep my role at the top of the role list and give me **Administrator** so I can recreate everything exactly. Roles above my role can't be restored."
+     ],
+     "commands": []
+    }
+   ],
+   "count": 4
+  },
+  {
+   "name": "Live Channel Counters",
+   "slug": "live-channel-counters",
+   "intro": [],
+   "required": null,
+   "sections": [
+    {
+     "title": "Commands",
+     "required": null,
+     "notes": [
+      "Counters sync every 10 minutes and block regular members from joining.",
+      "Requires Manage Server. The bot needs Manage Channels; booster counters need Server Members Intent."
+     ],
+     "commands": [
+      {
+       "usages": [
+        "counters add members [category]"
+       ],
+       "desc": "Create a member counter"
+      },
+      {
+       "usages": [
+        "counters add boosters [category]"
+       ],
+       "desc": "Create a boosting-member counter"
+      },
+      {
+       "usages": [
+        "counters add membergoal [category] --goal 1000"
+       ],
+       "desc": "Create a member goal"
+      },
+      {
+       "usages": [
+        "counters add boostgoal [category] --goal 50"
+       ],
+       "desc": "Create a booster goal"
+      },
+      {
+       "usages": [
+        "counters list"
+       ],
+       "desc": "List configured counters"
+      },
+      {
+       "usages": [
+        "counters remove <channel>"
+       ],
+       "desc": "Delete a counter channel"
+      }
+     ]
+    }
+   ],
+   "count": 6
+  },
+  {
+   "name": "Activity Roles",
+   "slug": "activity-roles",
+   "intro": [],
+   "required": "Activity Administrator",
+   "sections": [
+    {
+     "title": "Milestone Roles",
+     "required": null,
+     "notes": [
+      "Types: `voice_hours`, `camera_time`, `stream_time`, `messages`"
+     ],
+     "commands": [
+      {
+       "usages": [
+        "activityrole",
+        "activityrole list"
+       ],
+       "desc": "View configured milestone roles"
+      },
+      {
+       "usages": [
+        "activityrole add @role <type> <threshold>"
+       ],
+       "desc": "Set a milestone role"
+      },
+      {
+       "usages": [
+        "activityrole remove @role <type>"
+       ],
+       "desc": "Remove a milestone role"
+      },
+      {
+       "usages": [
+        "activityrole toggle"
+       ],
+       "desc": "Enable or disable the system"
+      },
+      {
+       "usages": [
+        "activityrole sweep <off|30m|1h|2h>"
+       ],
+       "desc": "Set the automatic sweep schedule"
+      },
+      {
+       "usages": [
+        "activityrole channel set #channel"
+       ],
+       "desc": "Set the promotion and demotion log"
+      }
+     ]
+    },
+    {
+     "title": "Activity Settings",
+     "required": null,
+     "notes": [],
+     "commands": [
+      {
+       "usages": [
+        "activity enable",
+        "activity disable"
+       ],
+       "desc": "Turn activity tracking on or off"
+      },
+      {
+       "usages": [
+        "activity status"
+       ],
+       "desc": "View the activity system status"
+      },
+      {
+       "usages": [
+        "activity interval <off|30m|1h|2h|minutes>"
+       ],
+       "desc": "Set the sweep interval"
+      },
+      {
+       "usages": [
+        "activitysweep confirm"
+       ],
+       "desc": "Run a milestone-role sweep now"
+      },
+      {
+       "usages": [
+        "activitylog set #channel",
+        "activitylog clear"
+       ],
+       "desc": "Manage the activity log"
+      },
+      {
+       "usages": [
+        "activity reset confirm"
+       ],
+       "desc": "Reset this server's activity data"
+      }
+     ]
+    },
+    {
+     "title": "Administration and Opt-Outs",
+     "required": null,
+     "notes": [],
+     "commands": [
+      {
+       "usages": [
+        "activityadmin add @user",
+        "activityadmin remove @user"
+       ],
+       "desc": "Manage activity administrators"
+      },
+      {
+       "usages": [
+        "activityadmin list"
+       ],
+       "desc": "View activity administrators"
+      },
+      {
+       "usages": [
+        "norole add @user"
+       ],
+       "desc": "Exclude a member from activity roles"
+      },
+      {
+       "usages": [
+        "norole remove @user"
+       ],
+       "desc": "Allow a member to receive activity roles again"
+      },
+      {
+       "usages": [
+        "norole list"
+       ],
+       "desc": "View activity-role opt-outs"
+      }
+     ]
+    }
+   ],
+   "count": 17
+  },
+  {
+   "name": "Event Logging",
+   "slug": "event-logging",
+   "intro": [
+    "**Categories:** Message, Voice, Channel, Role, Server, Member"
+   ],
+   "required": "Anti-Nuke Admin",
+   "sections": [
+    {
+     "title": "Commands",
+     "required": null,
+     "notes": [],
+     "commands": [
+      {
+       "usages": [
+        "logging"
+       ],
+       "desc": "View configured log channels"
+      },
+      {
+       "usages": [
+        "logging set <category> [#channel]"
+       ],
+       "desc": "Set one category"
+      },
+      {
+       "usages": [
+        "logging set all [#channel]"
+       ],
+       "desc": "Set every category"
+      },
+      {
+       "usages": [
+        "logging remove <category>"
+       ],
+       "desc": "Remove one category"
+      },
+      {
+       "usages": [
+        "logging remove all"
+       ],
+       "desc": "Remove all log channels"
+      },
+      {
+       "usages": [
+        "logging test <category>"
+       ],
+       "desc": "Send a test log"
+      },
+      {
+       "usages": [
+        "logging help"
+       ],
+       "desc": "View logging help"
+      }
+     ]
+    }
+   ],
+   "count": 7
+  },
+  {
+   "name": "Force Management",
+   "slug": "force-management",
+   "intro": [],
+   "required": "Need God or higher.",
+   "sections": [
+    {
+     "title": "Forever Bans",
+     "required": null,
+     "notes": [],
+     "commands": [
+      {
+       "usages": [
+        "foreverban @user [reason]"
+       ],
+       "desc": "Ban a user and automatically ban them again if they rejoin or are unbanned"
+      },
+      {
+       "usages": [
+        "unforeverban @user"
+       ],
+       "desc": "Remove the forever ban and unban the user"
+      },
+      {
+       "usages": [
+        "foreverbanlist"
+       ],
+       "desc": "View persistent forever bans"
+      }
+     ]
+    },
+    {
+     "title": "Forced Nicknames",
+     "required": null,
+     "notes": [],
+     "commands": [
+      {
+       "usages": [
+        "forcenickname @user <nickname>"
+       ],
+       "desc": "Set and persistently enforce a nickname"
+      },
+      {
+       "usages": [
+        "unforcenickname @user"
+       ],
+       "desc": "Stop nickname enforcement"
+      }
+     ]
+    },
+    {
+     "title": "Forced Role Strips",
+     "required": null,
+     "notes": [],
+     "commands": [
+      {
+       "usages": [
+        "forcerolestrip @user @role"
+       ],
+       "desc": "Persistently prevent a user from keeping a role"
+      },
+      {
+       "usages": [
+        "forcestrip @user @role"
+       ],
+       "desc": "Same persistent user role strip"
+      },
+      {
+       "usages": [
+        "forcestrip <role-name/id>"
+       ],
+       "desc": "Remove a role from all eligible members once"
+      },
+      {
+       "usages": [
+        "unforcerolestrip @user"
+       ],
+       "desc": "Remove all persistent role-strip rules for a user"
+      },
+      {
+       "usages": [
+        "unforcestrip @user"
+       ],
+       "desc": "Shortcut for `{p}unforcerolestrip`"
+      }
+     ]
+    }
+   ],
+   "count": 10
+  },
+  {
+   "name": "Vouch",
+   "slug": "vouch",
+   "intro": [],
+   "required": null,
+   "sections": [
+    {
+     "title": "Vouch Giver / Vouch Role",
+     "required": null,
+     "notes": [],
+     "commands": [
+      {
+       "usages": [
+        "vouch @user"
+       ],
+       "desc": "Give a vouch"
+      },
+      {
+       "usages": [
+        "vouch give @user"
+       ],
+       "desc": "Give a vouch"
+      },
+      {
+       "usages": [
+        "vouch take @user"
+       ],
+       "desc": "Remove your latest vouch for a member"
+      },
+      {
+       "usages": [
+        "vouch list"
+       ],
+       "desc": "Paginated server vouches"
+      },
+      {
+       "usages": [
+        "vouch info @user"
+       ],
+       "desc": "Member vouch information"
+      }
+     ]
+    },
+    {
+     "title": "Community Vouch",
+     "required": "Fool rank or higher",
+     "notes": [],
+     "commands": [
+      {
+       "usages": [
+        "cvouch"
+       ],
+       "desc": "View the Community Vouch system"
+      },
+      {
+       "usages": [
+        "cvouch @user"
+       ],
+       "desc": "Give a Community Vouch (Fool+)"
+      },
+      {
+       "usages": [
+        "cvouch take @user"
+       ],
+       "desc": "Remove a Community Vouch (Fool+)"
+      },
+      {
+       "usages": [
+        "cvouch list"
+       ],
+       "desc": "View Community Vouches (Fool+)"
+      },
+      {
+       "usages": [
+        "cvouch setrole @role"
+       ],
+       "desc": "Set the shared Vouch Role (Server Owner or Bot Owner)"
+      }
+     ]
+    },
+    {
+     "title": "Server Owner",
+     "required": "Server Owner",
+     "notes": [],
+     "commands": [
+      {
+       "usages": [
+        "vouch config"
+       ],
+       "desc": "View configuration"
+      },
+      {
+       "usages": [
+        "vouch setrole @role"
+       ],
+       "desc": "Set the vouch role"
+      },
+      {
+       "usages": [
+        "vouch unsetrole"
+       ],
+       "desc": "Remove the configured role"
+      },
+      {
+       "usages": [
+        "vouch addgiver @user"
+       ],
+       "desc": "Add a manual giver"
+      },
+      {
+       "usages": [
+        "vouch removegiver @user"
+       ],
+       "desc": "Remove a manual giver"
+      },
+      {
+       "usages": [
+        "vouch limit <number>"
+       ],
+       "desc": "Set the default give limit"
+      },
+      {
+       "usages": [
+        "vouch limit @user <number>"
+       ],
+       "desc": "Set a member's limit (0 resets it)"
+      },
+      {
+       "usages": [
+        "vouch wipeall"
+       ],
+       "desc": "Clear server vouches"
+      },
+      {
+       "usages": [
+        "vouch blacklist @user"
+       ],
+       "desc": "Blacklist a member"
+      },
+      {
+       "usages": [
+        "vouch unblacklist @user"
+       ],
+       "desc": "Remove the blacklist entry"
+      },
+      {
+       "usages": [
+        "vouch blacklist list"
+       ],
+       "desc": "View blacklisted members"
+      }
+     ]
+    },
+    {
+     "title": "Backdoor List",
+     "required": "CEO or higher",
+     "notes": [
+      "If someone on the backdoor list is vouched for, the person who tried to vouch them loses their roles and rank."
+     ],
+     "commands": [
+      {
+       "usages": [
+        "backdoor add @user"
+       ],
+       "desc": "Add a member to the backdoor list"
+      },
+      {
+       "usages": [
+        "backdoor remove @user"
+       ],
+       "desc": "Remove a member from the backdoor list"
+      },
+      {
+       "usages": [
+        "backdoor list"
+       ],
+       "desc": "View everyone on the backdoor list"
+      }
+     ]
+    }
+   ],
+   "count": 24
+  },
+  {
+   "name": "Giveaway",
+   "slug": "giveaway",
+   "intro": [],
+   "required": "Requires Manage Channels. Press 🎁 to toggle entry; stay in VC. Leaving voice removes your entry.",
+   "sections": [
+    {
+     "title": "Commands",
+     "required": null,
+     "notes": [],
+     "commands": [
+      {
+       "usages": [
+        "giveaway"
+       ],
+       "desc": "View the giveaway guide"
+      },
+      {
+       "usages": [
+        "giveaway start <duration> [winners=1] <prize>"
+       ],
+       "desc": "Start a giveaway"
+      },
+      {
+       "usages": [
+        "giveaway end <message>"
+       ],
+       "desc": "End and draw now"
+      },
+      {
+       "usages": [
+        "giveaway cancel <message>"
+       ],
+       "desc": "Cancel without drawing"
+      },
+      {
+       "usages": [
+        "giveaway reroll <message> [winners]"
+       ],
+       "desc": "Reroll an ended giveaway"
+      },
+      {
+       "usages": [
+        "giveaway list"
+       ],
+       "desc": "List active giveaways"
+      },
+      {
+       "usages": [
+        "giveaway info <message>"
+       ],
+       "desc": "View giveaway details"
+      },
+      {
+       "usages": [
+        "giveaway entries <message>"
+       ],
+       "desc": "View entries"
+      }
+     ]
+    },
+    {
+     "title": "Editing",
+     "required": null,
+     "notes": [],
+     "commands": [
+      {
+       "usages": [
+        "giveaway edit prize <message> <prize>"
+       ],
+       "desc": ""
+      },
+      {
+       "usages": [
+        "giveaway edit duration <message> <duration>"
+       ],
+       "desc": ""
+      },
+      {
+       "usages": [
+        "giveaway edit winners <message> <amount>"
+       ],
+       "desc": ""
+      },
+      {
+       "usages": [
+        "giveaway edit host <message> @user"
+       ],
+       "desc": ""
+      },
+      {
+       "usages": [
+        "giveaway edit thumbnail <message> <URL/remove>"
+       ],
+       "desc": ""
+      },
+      {
+       "usages": [
+        "giveaway edit image <message> <URL/remove>"
+       ],
+       "desc": ""
+      },
+      {
+       "usages": [
+        "giveaway edit roles <message> <roles/none>"
+       ],
+       "desc": ""
+      }
+     ]
+    }
+   ],
+   "count": 15
+  },
+  {
+   "name": "Moderation",
+   "slug": "moderation",
+   "intro": [],
+   "required": null,
+   "sections": [
+    {
+     "title": "Bans",
+     "required": "Ban Members",
+     "notes": [],
+     "commands": [
+      {
+       "usages": [
+        "ban @user [reason]"
+       ],
+       "desc": "Ban a member"
+      },
+      {
+       "usages": [
+        "tempban @user <duration> [reason]"
+       ],
+       "desc": "Ban for a set time"
+      },
+      {
+       "usages": [
+        "softban @user [reason]"
+       ],
+       "desc": "Ban then unban to clear their recent messages"
+      },
+      {
+       "usages": [
+        "hardban @user [reason]"
+       ],
+       "desc": "Ban that is reverted if someone unbans them"
+      },
+      {
+       "usages": [
+        "hardban list"
+       ],
+       "desc": "View hardbanned users"
+      },
+      {
+       "usages": [
+        "hardban clear"
+       ],
+       "desc": "Clear the hardban list (Manage Server)"
+      },
+      {
+       "usages": [
+        "unban @user"
+       ],
+       "desc": "Unban a user (alias `ub`)"
+      },
+      {
+       "usages": [
+        "unforeverban @user"
+       ],
+       "desc": "Lift a hardban (aliases `unfb`, `unhardban`)"
+      },
+      {
+       "usages": [
+        "unbanall"
+       ],
+       "desc": "Unban everyone, `{p}unbanall cancel` stops it (Administrator)"
+      }
+     ]
+    },
+    {
+     "title": "Kicks, Timeouts and Warnings",
+     "required": null,
+     "notes": [],
+     "commands": [
+      {
+       "usages": [
+        "kick @member [reason]"
+       ],
+       "desc": "Kick a member (Kick Members)"
+      },
+      {
+       "usages": [
+        "timeout @member <duration> [reason]"
+       ],
+       "desc": "Time a member out"
+      },
+      {
+       "usages": [
+        "untimeout @member [reason]"
+       ],
+       "desc": "Remove a timeout (alias `uto`)"
+      },
+      {
+       "usages": [
+        "warn @member [reason]"
+       ],
+       "desc": "Warn a member"
+      },
+      {
+       "usages": [
+        "warnings [@member]"
+       ],
+       "desc": "View warnings"
+      },
+      {
+       "usages": [
+        "clearwarnings @member"
+       ],
+       "desc": "Clear a member's warnings"
+      }
+     ]
+    },
+    {
+     "title": "Mutes",
+     "required": "Moderate Members",
+     "notes": [],
+     "commands": [
+      {
+       "usages": [
+        "setupmute"
+       ],
+       "desc": "Create the mute roles (Manage Roles)"
+      },
+      {
+       "usages": [
+        "mute @member [duration] [reason]"
+       ],
+       "desc": "Mute a member (alias `stfu`)"
+      },
+      {
+       "usages": [
+        "unmute @member [reason]"
+       ],
+       "desc": "Unmute a member"
+      },
+      {
+       "usages": [
+        "imute @member [duration] [reason]"
+       ],
+       "desc": "Image mute"
+      },
+      {
+       "usages": [
+        "iunmute @member [reason]"
+       ],
+       "desc": "Remove an image mute"
+      },
+      {
+       "usages": [
+        "rmute @member [duration] [reason]"
+       ],
+       "desc": "Reaction mute"
+      },
+      {
+       "usages": [
+        "runmute @member [reason]"
+       ],
+       "desc": "Remove a reaction mute"
+      }
+     ]
+    },
+    {
+     "title": "Jail",
+     "required": "Manage Roles",
+     "notes": [],
+     "commands": [
+      {
+       "usages": [
+        "modsetup"
+       ],
+       "desc": "Create the jail role and channel (Manage Server, alias `setupmod`)"
+      },
+      {
+       "usages": [
+        "jail @member [duration] [reason]"
+       ],
+       "desc": "Jail a member and strip their roles"
+      },
+      {
+       "usages": [
+        "unjail @member [reason]"
+       ],
+       "desc": "Release a member"
+      },
+      {
+       "usages": [
+        "jaillist"
+       ],
+       "desc": "View jailed members"
+      },
+      {
+       "usages": [
+        "stripstaff @member"
+       ],
+       "desc": "Remove a member's staff roles"
+      }
+     ]
+    },
+    {
+     "title": "Records",
+     "required": "Moderate Members",
+     "notes": [],
+     "commands": [
+      {
+       "usages": [
+        "history [@user] [action]"
+       ],
+       "desc": "Recent cases, optionally filtered"
+      },
+      {
+       "usages": [
+        "history view <case id>"
+       ],
+       "desc": "View one case"
+      },
+      {
+       "usages": [
+        "history remove @user <case id>"
+       ],
+       "desc": "Remove a case (Manage Server)"
+      },
+      {
+       "usages": [
+        "history removeall @user"
+       ],
+       "desc": "Remove all of a user's cases (Manage Server)"
+      },
+      {
+       "usages": [
+        "notes @user"
+       ],
+       "desc": "View a user's notes"
+      },
+      {
+       "usages": [
+        "notes add @user <note>"
+       ],
+       "desc": "Add a note"
+      },
+      {
+       "usages": [
+        "notes remove @user <note id>"
+       ],
+       "desc": "Remove a note"
+      },
+      {
+       "usages": [
+        "notes clear @user"
+       ],
+       "desc": "Clear all notes"
+      },
+      {
+       "usages": [
+        "modstats [@mod]"
+       ],
+       "desc": "Moderator activity stats"
+      },
+      {
+       "usages": [
+        "modhistory [@mod]"
+       ],
+       "desc": "Cases handled by a moderator"
+      },
+      {
+       "usages": [
+        "whois [@user]"
+       ],
+       "desc": "Info about a user"
+      }
+     ]
+    },
+    {
+     "title": "Channels",
+     "required": "Manage Channels",
+     "notes": [],
+     "commands": [
+      {
+       "usages": [
+        "lock [all]"
+       ],
+       "desc": "Lock this channel, or every channel (alias `l`)"
+      },
+      {
+       "usages": [
+        "unlock [all]"
+       ],
+       "desc": "Unlock (alias `ul`)"
+      },
+      {
+       "usages": [
+        "lockdown [all]"
+       ],
+       "desc": "Lock sending, reactions and threads"
+      },
+      {
+       "usages": [
+        "hide",
+        "unhide"
+       ],
+       "desc": "Hide or show this channel (alias `uh`)"
+      },
+      {
+       "usages": [
+        "slowmode [on/off] [#channel] [seconds]"
+       ],
+       "desc": "Set or view slowmode"
+      },
+      {
+       "usages": [
+        "topic <text>"
+       ],
+       "desc": "Set this channel's topic"
+      },
+      {
+       "usages": [
+        "talk #channel @role"
+       ],
+       "desc": "Toggle whether a role can talk in a channel"
+      },
+      {
+       "usages": [
+        "revokefiles on|off [#channel]"
+       ],
+       "desc": "Block or allow files and embeds"
+      }
+     ]
+    },
+    {
+     "title": "Threads and Voice",
+     "required": null,
+     "notes": [],
+     "commands": [
+      {
+       "usages": [
+        "thread rename <thread> <name>"
+       ],
+       "desc": "Rename a thread (Manage Threads)"
+      },
+      {
+       "usages": [
+        "thread lock|unlock <thread>"
+       ],
+       "desc": "Lock or unlock a thread"
+      },
+      {
+       "usages": [
+        "thread add|remove <thread> @member"
+       ],
+       "desc": "Add or remove a member"
+      },
+      {
+       "usages": [
+        "moveall <voice channel>"
+       ],
+       "desc": "Move everyone in your voice channel (Move Members)"
+      },
+      {
+       "usages": [
+        "drag <@member or ID> [more members] [voice channel or ID]"
+       ],
+       "desc": "Move members into a voice channel, or into your own call if you leave the channel out"
+      }
+     ]
+    },
+    {
+     "title": "Roles",
+     "required": "Manage Roles",
+     "notes": [],
+     "commands": [
+      {
+       "usages": [
+        "role @role [@member]"
+       ],
+       "desc": "Toggle a role on a member (you by default)"
+      },
+      {
+       "usages": [
+        "role bots @role [remove]"
+       ],
+       "desc": "Give or remove a role for every bot"
+      },
+      {
+       "usages": [
+        "role humans @role"
+       ],
+       "desc": "Give a role to every human"
+      },
+      {
+       "usages": [
+        "role create <name>",
+        "role delete @role"
+       ],
+       "desc": "Create or delete a role"
+      },
+      {
+       "usages": [
+        "role color <color> @role"
+       ],
+       "desc": "Change a role's color"
+      },
+      {
+       "usages": [
+        "role color gradient <color> <second color> @role"
+       ],
+       "desc": "Gradient color"
+      },
+      {
+       "usages": [
+        "role restore @member"
+       ],
+       "desc": "Restore a member's saved roles (alias `{p}rrs`)"
+      },
+      {
+       "usages": [
+        "temprole @member <duration> @role"
+       ],
+       "desc": "Give a temporary role"
+      },
+      {
+       "usages": [
+        "temprole"
+       ],
+       "desc": "List active temporary roles"
+      },
+      {
+       "usages": [
+        "blist @member @role"
+       ],
+       "desc": "Block or unblock a member from a role"
+      },
+      {
+       "usages": [
+        "inrole @role"
+       ],
+       "desc": "List members with a role"
+      },
+      {
+       "usages": [
+        "roles"
+       ],
+       "desc": "List every role"
+      }
+     ]
+    },
+    {
+     "title": "Server Lists",
+     "required": null,
+     "notes": [],
+     "commands": [
+      {
+       "usages": [
+        "rename @member <nickname>"
+       ],
+       "desc": "Change a nickname (Manage Nicknames)"
+      },
+      {
+       "usages": [
+        "bots"
+       ],
+       "desc": "List the bots in the server (Manage Server)"
+      },
+      {
+       "usages": [
+        "membercount"
+       ],
+       "desc": "Show the member count (alias `mc`)"
+      }
+     ]
+    },
+    {
+     "title": "Messages",
+     "required": "Manage Messages",
+     "notes": [],
+     "commands": [
+      {
+       "usages": [
+        "purge [amount]"
+       ],
+       "desc": "Delete recent messages (alias `c`)"
+      },
+      {
+       "usages": [
+        "purge bots|humans|images|files|emotes|links|invites [amount]"
+       ],
+       "desc": "Delete one kind"
+      },
+      {
+       "usages": [
+        "purge clear <amount> [@user]"
+       ],
+       "desc": "Delete messages, or just one user's"
+      },
+      {
+       "usages": [
+        "pi [amount]"
+       ],
+       "desc": "Delete messages with images"
+      },
+      {
+       "usages": [
+        "bc [amount]"
+       ],
+       "desc": "Delete bot and command messages"
+      },
+      {
+       "usages": [
+        "snipe [n]"
+       ],
+       "desc": "Show a deleted message"
+      },
+      {
+       "usages": [
+        "editsnipe [n]"
+       ],
+       "desc": "Show an edited message"
+      },
+      {
+       "usages": [
+        "reactionsnipe [n]"
+       ],
+       "desc": "Show a removed reaction"
+      },
+      {
+       "usages": [
+        "clearsnipe"
+       ],
+       "desc": "Clear snipe data here (alias `cs`)"
+      }
+     ]
+    },
+    {
+     "title": "Emojis, Stickers and Reminders",
+     "required": null,
+     "notes": [],
+     "commands": [
+      {
+       "usages": [
+        "emoji addmany <emojis>"
+       ],
+       "desc": "Add up to 25 custom emojis (Manage Expressions)"
+      },
+      {
+       "usages": [
+        "sticker add <name>"
+       ],
+       "desc": "Add a sticker from an attached or replied image"
+      },
+      {
+       "usages": [
+        "remind <duration> <text>"
+       ],
+       "desc": "Set a reminder (`list`, `remove <id>`)"
+      }
+     ]
+    },
+    {
+     "title": "Command Control",
+     "required": "Manage Server",
+     "notes": [],
+     "commands": [
+      {
+       "usages": [
+        "disablecommand #channel|@member <command>"
+       ],
+       "desc": "Disable a command (alias `dcmd`)"
+      },
+      {
+       "usages": [
+        "disablecommand all <command>"
+       ],
+       "desc": "Disable it server-wide"
+      },
+      {
+       "usages": [
+        "disablecommand list"
+       ],
+       "desc": "View disabled commands"
+      },
+      {
+       "usages": [
+        "enablecommand #channel|@member <command>"
+       ],
+       "desc": "Re-enable (alias `ecmd`)"
+      },
+      {
+       "usages": [
+        "enablecommand all <command>"
+       ],
+       "desc": "Remove every block on a command"
+      },
+      {
+       "usages": [
+        "ignore add|remove @member|#channel"
+       ],
+       "desc": "Make the bot ignore someone or a channel"
+      },
+      {
+       "usages": [
+        "ignore list"
+       ],
+       "desc": "View ignored members and channels"
+      },
+      {
+       "usages": [
+        "restrictcommand <command> @role"
+       ],
+       "desc": "Limit a command to a role (alias `rc`)"
+      },
+      {
+       "usages": [
+        "restrictcommand add|remove <command> @role"
+       ],
+       "desc": "Add or remove a role"
+      },
+      {
+       "usages": [
+        "restrictcommand list",
+        "reset"
+       ],
+       "desc": "View or clear restrictions"
+      }
+     ]
+    },
+    {
+     "title": "Auto Moderation",
+     "required": "Manage Server",
+     "notes": [
+      "Optional: `--threshold N` and `--interval N`"
+     ],
+     "commands": [
+      {
+       "usages": [
+        "filter"
+       ],
+       "desc": "View the filter settings"
+      },
+      {
+       "usages": [
+        "filter spam|links|caps|invites <#channel/all> <on/off>"
+       ],
+       "desc": "Turn a filter on or off"
+      },
+      {
+       "usages": [
+        "filter <type> exempt @role"
+       ],
+       "desc": "Exempt a role"
+      },
+      {
+       "usages": [
+        "filter links whitelist #channel|all <domain>"
+       ],
+       "desc": "Allow a domain"
+      },
+      {
+       "usages": [
+        "filter snipe <type>"
+       ],
+       "desc": "Keep a type of content out of snipe"
+      }
+     ]
+    },
+    {
+     "title": "Autorole",
+     "required": "Manage Roles",
+     "notes": [],
+     "commands": [
+      {
+       "usages": [
+        "autorole add|remove @role"
+       ],
+       "desc": "Roles given to new members"
+      },
+      {
+       "usages": [
+        "autorole list",
+        "reset"
+       ],
+       "desc": "View or clear them"
+      }
+     ]
+    },
+    {
+     "title": "Anti-Raid",
+     "required": "Manage Server",
+     "notes": [],
+     "commands": [
+      {
+       "usages": [
+        "antiraid newaccounts on|off [days]"
+       ],
+       "desc": "Block very new accounts"
+      },
+      {
+       "usages": [
+        "antiraid avatar on|off"
+       ],
+       "desc": "Block accounts without an avatar"
+      },
+      {
+       "usages": [
+        "antiraid massjoin on|off [count] [seconds]"
+       ],
+       "desc": "Mass join protection"
+      },
+      {
+       "usages": [
+        "antiraid whitelist @user"
+       ],
+       "desc": "Whitelist a user (`whitelist view`)"
+      },
+      {
+       "usages": [
+        "antiraid config"
+       ],
+       "desc": "View the settings (alias `raidstate`)"
+      }
+     ]
+    },
+    {
+     "title": "Fake Permissions",
+     "required": null,
+     "notes": [],
+     "commands": [
+      {
+       "usages": [
+        "fakepermissions list [target]"
+       ],
+       "desc": "View them (alias `fp`, Manage Server)"
+      },
+      {
+       "usages": [
+        "fakepermissions grant <role/member> <permissions>"
+       ],
+       "desc": "Grant (owner or admin)"
+      },
+      {
+       "usages": [
+        "fakepermissions revoke <target> <permission>"
+       ],
+       "desc": "Revoke (owner or admin)"
+      },
+      {
+       "usages": [
+        "fakepermissions reset"
+       ],
+       "desc": "Reset all (owner or admin)"
+      }
+     ]
+    },
+    {
+     "title": "Owner",
+     "required": null,
+     "notes": [],
+     "commands": [
+      {
+       "usages": [
+        "nuke"
+       ],
+       "desc": "Delete and recreate this channel to wipe its messages (owner, Anti-Nuke admins, Administrators)"
+      }
+     ]
+    }
+   ],
+   "count": 105
+  },
+  {
+   "name": "Tickets",
+   "slug": "tickets",
+   "intro": [],
+   "required": null,
+   "sections": [
+    {
+     "title": "Commands",
+     "required": null,
+     "notes": [],
+     "commands": [
+      {
+       "usages": [
+        "ticket setup",
+        "setup tickets"
+       ],
+       "desc": "Create or configure the Tickets category"
+      },
+      {
+       "usages": [
+        "ticket config"
+       ],
+       "desc": "View ticket settings"
+      },
+      {
+       "usages": [
+        "ticket osrole [@role]"
+       ],
+       "desc": "Set or create an OS role with full ticket access"
+      },
+      {
+       "usages": [
+        "ticket managerrole @role"
+       ],
+       "desc": "Set the Ticket Manager role"
+      },
+      {
+       "usages": [
+        "ticket staffrole @role"
+       ],
+       "desc": "Set the Ticket Staff role"
+      },
+      {
+       "usages": [
+        "ticket logchannel #channel"
+       ],
+       "desc": "Set the private ticket log channel"
+      },
+      {
+       "usages": [
+        "ticket panel #channel"
+       ],
+       "desc": "Send the Create a ticket panel"
+      },
+      {
+       "usages": [
+        "ticket open"
+       ],
+       "desc": "Create your own ticket"
+      },
+      {
+       "usages": [
+        "ticket claim"
+       ],
+       "desc": "Claim the current ticket"
+      },
+      {
+       "usages": [
+        "ticket close"
+       ],
+       "desc": "Close and delete the current ticket"
+      },
+      {
+       "usages": [
+        "ticket reopen"
+       ],
+       "desc": "Reopen the current ticket"
+      },
+      {
+       "usages": [
+        "ticket info"
+       ],
+       "desc": "View ticket information"
+      },
+      {
+       "usages": [
+        "ticket transcript"
+       ],
+       "desc": "Download the ticket message transcript"
+      }
+     ]
+    }
+   ],
+   "count": 13
+  },
+  {
+   "name": "Disconnect Security",
+   "slug": "disconnect-security",
+   "intro": [
+    "At the disconnect threshold, the bot removes the offender's manageable roles granting Discord Move Members or Administrator. Roles above the bot and managed roles cannot be removed."
+   ],
+   "required": null,
+   "sections": [
+    {
+     "title": "Commands",
+     "required": null,
+     "notes": [],
+     "commands": [
+      {
+       "usages": [
+        "disconnectsecurity"
+       ],
+       "desc": "View disconnect-security help"
+      },
+      {
+       "usages": [
+        "disconnectsecurity setup"
+       ],
+       "desc": "Set up disconnect security"
+      },
+      {
+       "usages": [
+        "disconnectsecurity status"
+       ],
+       "desc": "View current settings"
+      },
+      {
+       "usages": [
+        "disconnectsecurity threshold <count> [window_minutes]"
+       ],
+       "desc": "Set the trigger limit"
+      },
+      {
+       "usages": [
+        "disconnectsecurity logchannel #channel"
+       ],
+       "desc": "Set the log channel"
+      },
+      {
+       "usages": [
+        "disconnectsecurity pingrole @role"
+       ],
+       "desc": "Set or toggle the alert role"
+      },
+      {
+       "usages": [
+        "disconnectsecurity reset @user"
+       ],
+       "desc": "Clear a member's disconnect history"
+      },
+      {
+       "usages": [
+        "disconnectsecurity check @user"
+       ],
+       "desc": "Check a member's disconnect history"
+      }
+     ]
+    },
+    {
+     "title": "Short Commands",
+     "required": null,
+     "notes": [],
+     "commands": [
+      {
+       "usages": [
+        "disconnect threshold set <count> [window]"
+       ],
+       "desc": "Set the trigger limit"
+      },
+      {
+       "usages": [
+        "disconnect threshold view"
+       ],
+       "desc": "View the trigger limit"
+      },
+      {
+       "usages": [
+        "disconnect reset @user"
+       ],
+       "desc": "Clear a member's disconnect history"
+      }
+     ]
+    }
+   ],
+   "count": 11
+  },
+  {
+   "name": "VoiceMaster",
+   "slug": "voicemaster",
+   "intro": [],
+   "required": "Manage Server (categories: Server Owner)",
+   "sections": [
+    {
+     "title": "Setup",
+     "required": null,
+     "notes": [],
+     "commands": [
+      {
+       "usages": [
+        "vm"
+       ],
+       "desc": "Show the VoiceMaster overview and the current hubs"
+      },
+      {
+       "usages": [
+        "vm setup"
+       ],
+       "desc": "Create a category, a \"Join to Create\" channel and an `interface` channel with the control panel"
+      },
+      {
+       "usages": [
+        "vm hub set <channel>"
+       ],
+       "desc": "Use an existing voice channel as the hub"
+      },
+      {
+       "usages": [
+        "vm hub create [name]"
+       ],
+       "desc": "Create a hub channel"
+      },
+      {
+       "usages": [
+        "vm hub2 set <channel>"
+       ],
+       "desc": "Set a second hub"
+      },
+      {
+       "usages": [
+        "vm hub2 create [name]"
+       ],
+       "desc": "Create a second hub"
+      },
+      {
+       "usages": [
+        "vm hub2 remove"
+       ],
+       "desc": "Remove the second hub"
+      }
+     ]
+    },
+    {
+     "title": "Categories",
+     "required": "Server Owner",
+     "notes": [],
+     "commands": [
+      {
+       "usages": [
+        "vm category add [name]"
+       ],
+       "desc": "Add a category slot"
+      },
+      {
+       "usages": [
+        "vm category remove <slot>"
+       ],
+       "desc": "Remove a slot"
+      },
+      {
+       "usages": [
+        "vm category set <slot> <category>"
+       ],
+       "desc": "Point a slot at a category"
+      },
+      {
+       "usages": [
+        "vm category list"
+       ],
+       "desc": "View the slots"
+      },
+      {
+       "usages": [
+        "vm category prefix <slot> <text>"
+       ],
+       "desc": "Name prefix for channels in a slot"
+      },
+      {
+       "usages": [
+        "vm category sequential <slot> on/off"
+       ],
+       "desc": "Number channels in order"
+      }
+     ]
+    },
+    {
+     "title": "Channel Names",
+     "required": null,
+     "notes": [],
+     "commands": [
+      {
+       "usages": [
+        "vm default name [template]"
+       ],
+       "desc": "Default name for new channels (`{user}`, `{username}`)"
+      }
+     ]
+    },
+    {
+     "title": "Random Hub",
+     "required": null,
+     "notes": [],
+     "commands": [
+      {
+       "usages": [
+        "vm randomhub set <channel>"
+       ],
+       "desc": "Joining it drops you in a random voice channel"
+      },
+      {
+       "usages": [
+        "vm randomhub category add <category>"
+       ],
+       "desc": "Allow a category"
+      },
+      {
+       "usages": [
+        "vm randomhub category remove <category>"
+       ],
+       "desc": "Remove a category"
+      }
+     ]
+    },
+    {
+     "title": "Auto-Unmute",
+     "required": null,
+     "notes": [],
+     "commands": [
+      {
+       "usages": [
+        "vm autounmute set <channel>"
+       ],
+       "desc": "Remove the server mute from anyone who joins"
+      },
+      {
+       "usages": [
+        "vm autounmute2 set <channel>"
+       ],
+       "desc": "A second auto-unmute channel"
+      }
+     ]
+    },
+    {
+     "title": "Panel",
+     "required": null,
+     "notes": [],
+     "commands": [
+      {
+       "usages": [
+        "vm panel"
+       ],
+       "desc": "Preview the control panel in this channel"
+      }
+     ]
+    }
+   ],
+   "count": 20
+  },
+  {
+   "name": "VC Commands",
+   "slug": "vc-commands",
+   "intro": [
+    "**Channel Control:**"
+   ],
+   "required": null,
+   "sections": [
+    {
+     "title": "Commands",
+     "required": null,
+     "notes": [
+      "**User Management:**",
+      "**Channel Settings:**"
+     ],
+     "commands": [
+      {
+       "usages": [
+        "vc lock"
+       ],
+       "desc": "Lock your voice channel"
+      },
+      {
+       "usages": [
+        "vc unlock"
+       ],
+       "desc": "Unlock your voice channel"
+      },
+      {
+       "usages": [
+        "vc ghost"
+       ],
+       "desc": "Hide your voice channel"
+      },
+      {
+       "usages": [
+        "vc unghost",
+        "vc reveal"
+       ],
+       "desc": "Reveal your voice channel"
+      },
+      {
+       "usages": [
+        "vc claim"
+       ],
+       "desc": "Claim when the current owner is outside the call"
+      },
+      {
+       "usages": [
+        "vc transfer @user"
+       ],
+       "desc": "Transfer ownership"
+      },
+      {
+       "usages": [
+        "vc partner @user"
+       ],
+       "desc": "Make a member co-owner"
+      },
+      {
+       "usages": [
+        "interface"
+       ],
+       "desc": "Post the channel controls in the VC chat"
+      },
+      {
+       "usages": [
+        "setinterface #channel"
+       ],
+       "desc": "Set the reusable interface channel"
+      },
+      {
+       "usages": [
+        "vc disconnect @user"
+       ],
+       "desc": "Disconnect a member"
+      },
+      {
+       "usages": [
+        "vc reject @user"
+       ],
+       "desc": "Block a member from rejoining"
+      },
+      {
+       "usages": [
+        "vc permit @user"
+       ],
+       "desc": "Permit a rejected or banned member, or let them bypass autokick in this call"
+      },
+      {
+       "usages": [
+        "autokick [on/off]",
+        "vc autokick [on/off]"
+       ],
+       "desc": "Channel owner only: disconnect anyone who joins your VC without a permit"
+      },
+      {
+       "usages": [
+        "vc ban @user"
+       ],
+       "desc": "Ban a member from your VC"
+      },
+      {
+       "usages": [
+        "vc unban @user"
+       ],
+       "desc": "Unban a member from your VC"
+      },
+      {
+       "usages": [
+        "vc knock"
+       ],
+       "desc": "Ping the current VC owner"
+      },
+      {
+       "usages": [
+        "vc rename <name>"
+       ],
+       "desc": "Rename the channel"
+      },
+      {
+       "usages": [
+        "vc bitrate <kbps>"
+       ],
+       "desc": "Set the bitrate"
+      },
+      {
+       "usages": [
+        "vc region <region>"
+       ],
+       "desc": "Set the voice region"
+      },
+      {
+       "usages": [
+        "vc limit <number>"
+       ],
+       "desc": "Set the user limit"
+      },
+      {
+       "usages": [
+        "vc count"
+       ],
+       "desc": "View the server voice count"
+      },
+      {
+       "usages": [
+        "mvc"
+       ],
+       "desc": "View live voice totals and state counts"
+      },
+      {
+       "usages": [
+        "vc activity"
+       ],
+       "desc": "View member voice activity states"
+      },
+      {
+       "usages": [
+        "vc info"
+       ],
+       "desc": "View channel information"
+      },
+      {
+       "usages": [
+        "stats [@user]"
+       ],
+       "desc": "View a member's voice profile"
+      },
+      {
+       "usages": [
+        "stats list",
+        "status list"
+       ],
+       "desc": "View the top 20 voice members as an image card"
+      }
+     ]
+    }
+   ],
+   "count": 26
+  },
+  {
+   "name": "VC Utility",
+   "slug": "vc-utility",
+   "intro": [
+    "**Everyone:**"
+   ],
+   "required": null,
+   "sections": [
+    {
+     "title": "Commands",
+     "required": null,
+     "notes": [
+      "**Chief & Above:**",
+      "**Clover & Above:**",
+      "**Pres & Above:**",
+      "**God & Above:**",
+      "**Fool & Above:**",
+      "**Administrator:**",
+      "**Sunset Access:**"
+     ],
+     "commands": [
+      {
+       "usages": [
+        "vc follow [@user]",
+        "follow [@user]"
+       ],
+       "desc": "Follow and move to their call"
+      },
+      {
+       "usages": [
+        "vc unfollow [@user/all]",
+        "unfollow [@user/all]"
+       ],
+       "desc": "Stop following"
+      },
+      {
+       "usages": [
+        "vc chain @user @user ..."
+       ],
+       "desc": "Send chain requests"
+      },
+      {
+       "usages": [
+        "vc shield @user",
+        "vc unshield @user"
+       ],
+       "desc": "Manage shields"
+      },
+      {
+       "usages": [
+        "vc antikick",
+        "vc antidrag",
+        "vc antikickdrag"
+       ],
+       "desc": "Toggle your protection"
+      },
+      {
+       "usages": [
+        "vc drag @user"
+       ],
+       "desc": "Move a member into your call"
+      },
+      {
+       "usages": [
+        "vc dragall #channel"
+       ],
+       "desc": "Move unprotected members"
+      },
+      {
+       "usages": [
+        "vc voicehistory [@user]"
+       ],
+       "desc": "View voice history"
+      },
+      {
+       "usages": [
+        "vc forceclaim"
+       ],
+       "desc": "Claim ownership"
+      },
+      {
+       "usages": [
+        "vc autokick [on/off]",
+        "autokick [on/off]"
+       ],
+       "desc": "VC owner only: toggle autokick for your own voice channel"
+      },
+      {
+       "usages": [
+        "vc forceownership @user"
+       ],
+       "desc": "Assign ownership"
+      },
+      {
+       "usages": [
+        "vc stfu @user",
+        "vc unstfu @user"
+       ],
+       "desc": "Manage persistent voice mute"
+      },
+      {
+       "usages": [
+        "vc stfu list",
+        "vc stfu wipeall"
+       ],
+       "desc": "List or clear persistent mutes"
+      },
+      {
+       "usages": [
+        "godmode @user",
+        "vc godmode @user"
+       ],
+       "desc": "Toggle protection"
+      },
+      {
+       "usages": [
+        "vc ungodmode @user"
+       ],
+       "desc": "Remove protection"
+      },
+      {
+       "usages": [
+        "godmode list",
+        "godmode wipeall"
+       ],
+       "desc": "List or clear Godmode"
+      },
+      {
+       "usages": [
+        "moveall #channel"
+       ],
+       "desc": "Move everyone from your current VC"
+      },
+      {
+       "usages": [
+        "vc blacklist @user",
+        "vc blacklist remove @user",
+        "vc blacklist list"
+       ],
+       "desc": ""
+      }
+     ]
+    }
+   ],
+   "count": 18
+  },
+  {
+   "name": "Recorder",
+   "slug": "recorder",
+   "intro": [],
+   "required": "Manage Server, Anti-Nuke admin, or server owner. You must be in the voice channel.",
+   "sections": [
+    {
+     "title": "Commands",
+     "required": null,
+     "notes": [
+      "The bot announces the recording in this channel when it starts and whenever someone joins the call. Recordings stop by themselves after an hour or once everyone has left."
+     ],
+     "commands": [
+      {
+       "usages": [
+        "record start"
+       ],
+       "desc": "Join your voice channel and start recording everyone in it"
+      },
+      {
+       "usages": [
+        "record stop"
+       ],
+       "desc": "Stop recording and post the mp3 (alias `end`)"
+      },
+      {
+       "usages": [
+        "record status"
+       ],
+       "desc": "See how long the current recording has been running"
+      }
+     ]
+    }
+   ],
+   "count": 3
+  },
+  {
+   "name": "Rank Management",
+   "slug": "rank-management",
+   "intro": [
+    "**Bot Owner:**"
+   ],
+   "required": null,
+   "sections": [
+    {
+     "title": "Commands",
+     "required": null,
+     "notes": [
+      "**Server Owner / Bot Owner / Ceo:**",
+      "**Server Owner / Bot Owner:**",
+      "**Rank Hierarchy (Highest to Lowest):**",
+      "1. Bot Owner",
+      "2. Server Owner",
+      "3. CEO",
+      "4. Fool",
+      "5. God",
+      "6. Pres",
+      "7. Party",
+      "8. Clover",
+      "9. Cheif",
+      "10. Member"
+     ],
+     "commands": [
+      {
+       "usages": [
+        "ceo add @user",
+        "ceo remove @user"
+       ],
+       "desc": ""
+      },
+      {
+       "usages": [
+        "fool add @user",
+        "fool remove @user"
+       ],
+       "desc": ""
+      },
+      {
+       "usages": [
+        "god add @user",
+        "god remove @user"
+       ],
+       "desc": ""
+      },
+      {
+       "usages": [
+        "pres add @user",
+        "pres remove @user"
+       ],
+       "desc": ""
+      },
+      {
+       "usages": [
+        "party add @user",
+        "party remove @user"
+       ],
+       "desc": ""
+      },
+      {
+       "usages": [
+        "clover add @user",
+        "clover remove @user"
+       ],
+       "desc": ""
+      },
+      {
+       "usages": [
+        "cheif add @user",
+        "chief remove @user"
+       ],
+       "desc": ""
+      },
+      {
+       "usages": [
+        "clearranks @user"
+       ],
+       "desc": "Clear a member's rank"
+      }
+     ]
+    }
+   ],
+   "count": 8
+  },
+  {
+   "name": "Community Utilities",
+   "slug": "community-utilities",
+   "intro": [],
+   "required": null,
+   "sections": [
+    {
+     "title": "Commands",
+     "required": null,
+     "notes": [
+      "Use each command with no arguments to see its subcommands."
+     ],
+     "commands": [
+      {
+       "usages": [
+        "xp"
+       ],
+       "desc": "Chat and voice XP, rank cards..."
+      },
+      {
+       "usages": [
+        "xp rank [@user]"
+       ],
+       "desc": "View a customizable rank card"
+      },
+      {
+       "usages": [
+        "xp top"
+       ],
+       "desc": "Top 20 XP rankings"
+      },
+      {
+       "usages": [
+        "xp card <accent> [background]"
+       ],
+       "desc": "Personal card colors"
+      },
+      {
+       "usages": [
+        "xp config <on/off> [chat] [voice]"
+       ],
+       "desc": "XP settings (Manage Server)"
+      },
+      {
+       "usages": [
+        "xp reward <level> @role",
+        "xp rewards",
+        "xp remove @role"
+       ],
+       "desc": "Tiered rewards"
+      },
+      {
+       "usages": [
+        "stickymsg [#channel] <text or embed script>"
+       ],
+       "desc": "Bottom-of-channel notice"
+      },
+      {
+       "usages": [
+        "unstickymsg [#channel]",
+        "stickylist"
+       ],
+       "desc": "Manage notices"
+      }
+     ]
+    }
+   ],
+   "count": 8
+  },
+  {
+   "name": "Utility",
+   "slug": "utility",
+   "intro": [],
+   "required": null,
+   "sections": [
+    {
+     "title": "Info",
+     "required": null,
+     "notes": [],
+     "commands": [
+      {
+       "usages": [
+        "avatar [user]"
+       ],
+       "desc": "Show someone's avatar (aliases `av`, `pfp`)"
+      },
+      {
+       "usages": [
+        "serveravatar [member]"
+       ],
+       "desc": "Their server avatar (alias `sav`)"
+      },
+      {
+       "usages": [
+        "banner [user]"
+       ],
+       "desc": "Show someone's profile banner"
+      },
+      {
+       "usages": [
+        "servericon",
+        "serverbanner"
+       ],
+       "desc": "The server's icon or banner"
+      },
+      {
+       "usages": [
+        "userinfo [user]"
+       ],
+       "desc": "Info about a user (aliases `ui`, `uinfo`)"
+      },
+      {
+       "usages": [
+        "serverinfo"
+       ],
+       "desc": "Info about this server (alias `si`)"
+      },
+      {
+       "usages": [
+        "channelinfo [channel]"
+       ],
+       "desc": "Info about a channel (alias `ci`)"
+      },
+      {
+       "usages": [
+        "inviteinfo <invite>"
+       ],
+       "desc": "Look up a server invite"
+      },
+      {
+       "usages": [
+        "botinfo"
+       ],
+       "desc": "About the bot (aliases `about`, `bi`)"
+      },
+      {
+       "usages": [
+        "uptime"
+       ],
+       "desc": "How long the bot has been online"
+      },
+      {
+       "usages": [
+        "invite"
+       ],
+       "desc": "Get the bot's invite link"
+      },
+      {
+       "usages": [
+        "joinposition [member]"
+       ],
+       "desc": "Where someone joined (alias `joinpos`)"
+      },
+      {
+       "usages": [
+        "firstmessage [#channel]"
+       ],
+       "desc": "Jump to a channel's first message (alias `firstmsg`)"
+      },
+      {
+       "usages": [
+        "boosters"
+       ],
+       "desc": "List server boosters"
+      },
+      {
+       "usages": [
+        "bans"
+       ],
+       "desc": "List banned users (Ban Members)"
+      },
+      {
+       "usages": [
+        "emojis"
+       ],
+       "desc": "List the server's emojis"
+      }
+     ]
+    },
+    {
+     "title": "Tools",
+     "required": null,
+     "notes": [],
+     "commands": [
+      {
+       "usages": [
+        "calc <math>"
+       ],
+       "desc": "Calculator (alias `calculate`)"
+      },
+      {
+       "usages": [
+        "poll <question> | <option> | <option>"
+       ],
+       "desc": "Start a poll (no options = yes/no)"
+      },
+      {
+       "usages": [
+        "afk [reason]"
+       ],
+       "desc": "Set yourself AFK, cleared when you next talk"
+      },
+      {
+       "usages": [
+        "enlarge <emoji>"
+       ],
+       "desc": "Big version of a custom emoji (alias `jumbo`)"
+      },
+      {
+       "usages": [
+        "steal <emoji> [name]"
+       ],
+       "desc": "Add a custom emoji here, or reply to a message (Manage Expressions)"
+      },
+      {
+       "usages": [
+        "selfpurge [amount]"
+       ],
+       "desc": "Delete your own recent messages here (alias `sp`)"
+      },
+      {
+       "usages": [
+        "pin",
+        "unpin"
+       ],
+       "desc": "Reply to a message to pin or unpin it (Manage Messages)"
+      },
+      {
+       "usages": [
+        "nsfw"
+       ],
+       "desc": "Toggle the age restriction on this channel (Manage Channels)"
+      }
+     ]
+    },
+    {
+     "title": "Tags",
+     "required": null,
+     "notes": [],
+     "commands": [
+      {
+       "usages": [
+        "tag <name>"
+       ],
+       "desc": "Show a tag"
+      },
+      {
+       "usages": [
+        "tag add <name> <content>"
+       ],
+       "desc": "Create a tag (use quotes for a name with spaces)"
+      },
+      {
+       "usages": [
+        "tag remove <name>"
+       ],
+       "desc": "Delete your tag (Manage Messages can delete any)"
+      },
+      {
+       "usages": [
+        "tag list"
+       ],
+       "desc": "List this server's tags"
+      },
+      {
+       "usages": [
+        "tag info <name>"
+       ],
+       "desc": "Who made a tag and how often it's used"
+      }
+     ]
+    },
+    {
+     "title": "Birthdays",
+     "required": null,
+     "notes": [],
+     "commands": [
+      {
+       "usages": [
+        "birthday [member]"
+       ],
+       "desc": "View a birthday (alias `bday`)"
+      },
+      {
+       "usages": [
+        "birthday set <date>"
+       ],
+       "desc": "Set yours, like `12/25` or `dec 25`"
+      },
+      {
+       "usages": [
+        "birthday remove"
+       ],
+       "desc": "Remove yours"
+      },
+      {
+       "usages": [
+        "birthday list"
+       ],
+       "desc": "Upcoming birthdays in this server"
+      }
+     ]
+    }
+   ],
+   "count": 33
+  },
+  {
+   "name": "Fun",
+   "slug": "fun",
+   "intro": [],
+   "required": null,
+   "sections": [
+    {
+     "title": "Games",
+     "required": null,
+     "notes": [],
+     "commands": [
+      {
+       "usages": [
+        "8ball <question>"
+       ],
+       "desc": "Ask the magic 8-ball (alias `8b`)"
+      },
+      {
+       "usages": [
+        "coinflip"
+       ],
+       "desc": "Flip a coin (aliases `cf`, `flip`)"
+      },
+      {
+       "usages": [
+        "roll [NdM]"
+       ],
+       "desc": "Roll dice, like `roll 2d6` (default `1d6`)"
+      },
+      {
+       "usages": [
+        "choose a, b, c"
+       ],
+       "desc": "Pick one for you (alias `pick`)"
+      },
+      {
+       "usages": [
+        "rps <rock|paper|scissors>"
+       ],
+       "desc": "Play against the bot"
+      },
+      {
+       "usages": [
+        "ship @a [@b]"
+       ],
+       "desc": "How well do two people match? (alias `match`)"
+      },
+      {
+       "usages": [
+        "rate <thing>"
+       ],
+       "desc": "Rate anything out of 100"
+      },
+      {
+       "usages": [
+        "wyr"
+       ],
+       "desc": "A would-you-rather question"
+      },
+      {
+       "usages": [
+        "truth",
+        "dare"
+       ],
+       "desc": "A truth or a dare"
+      }
+     ]
+    },
+    {
+     "title": "Actions",
+     "required": null,
+     "notes": [],
+     "commands": [
+      {
+       "usages": [
+        "hug @user",
+        "kiss @user",
+        "slap @user",
+        "pat @user",
+        "cuddle @user",
+        "poke @user",
+        "bite @user",
+        "punch @user",
+        "highfive @user",
+        "bonk @user"
+       ],
+       "desc": "Do something to someone"
+      }
+     ]
+    },
+    {
+     "title": "Text",
+     "required": null,
+     "notes": [],
+     "commands": [
+      {
+       "usages": [
+        "mock <text>"
+       ],
+       "desc": "sPoNgEbOb tExT"
+      },
+      {
+       "usages": [
+        "reverse <text>"
+       ],
+       "desc": "Reverse text"
+      },
+      {
+       "usages": [
+        "clap <text>"
+       ],
+       "desc": "Put 👏 between 👏 words"
+      },
+      {
+       "usages": [
+        "owo <text>"
+       ],
+       "desc": "Owoify text"
+      }
+     ]
+    }
+   ],
+   "count": 14
+  },
+  {
+   "name": "Economy",
+   "slug": "economy",
+   "intro": [
+    "Your money is the same in every server."
+   ],
+   "required": null,
+   "sections": [
+    {
+     "title": "Money",
+     "required": null,
+     "notes": [],
+     "commands": [
+      {
+       "usages": [
+        "balance [member]"
+       ],
+       "desc": "See a wallet and bank (aliases `bal`, `cash`)"
+      },
+      {
+       "usages": [
+        "daily"
+       ],
+       "desc": "Claim your daily reward"
+      },
+      {
+       "usages": [
+        "weekly"
+       ],
+       "desc": "Claim your weekly reward"
+      },
+      {
+       "usages": [
+        "work"
+       ],
+       "desc": "Work for some cash (once an hour)"
+      },
+      {
+       "usages": [
+        "pay @member <amount>"
+       ],
+       "desc": "Send money (alias `give`)"
+      },
+      {
+       "usages": [
+        "deposit <amount|all>"
+       ],
+       "desc": "Move cash to your bank (alias `dep`)"
+      },
+      {
+       "usages": [
+        "withdraw <amount|all>"
+       ],
+       "desc": "Take cash out of your bank (alias `with`)"
+      },
+      {
+       "usages": [
+        "rob @member"
+       ],
+       "desc": "Try to steal some cash (once every 2 hours, alias `steal`)"
+      },
+      {
+       "usages": [
+        "baltop"
+       ],
+       "desc": "Richest users across all servers (alias `richest`)"
+      }
+     ]
+    },
+    {
+     "title": "Games",
+     "required": null,
+     "notes": [],
+     "commands": [
+      {
+       "usages": [
+        "gamble <amount|all>"
+       ],
+       "desc": "Double it or lose it (alias `bet`)"
+      },
+      {
+       "usages": [
+        "slots <amount|all>"
+       ],
+       "desc": "Spin the slot machine"
+      },
+      {
+       "usages": [
+        "coinflip <heads|tails> <amount|all>"
+       ],
+       "desc": "Call it, double or lose (alias `cf`)"
+      }
+     ]
+    },
+    {
+     "title": "Bot owner only",
+     "required": null,
+     "notes": [],
+     "commands": [
+      {
+       "usages": [
+        "economy add @member <amount>"
+       ],
+       "desc": "Give money"
+      },
+      {
+       "usages": [
+        "economy remove @member <amount>"
+       ],
+       "desc": "Take money"
+      },
+      {
+       "usages": [
+        "economy reset @member"
+       ],
+       "desc": "Wipe someone's money"
+      }
+     ]
+    }
+   ],
+   "count": 15
+  },
+  {
+   "name": "General",
+   "slug": "general",
+   "intro": [
+    "Help shortcuts, bot latency and the server prefix."
+   ],
+   "required": null,
+   "sections": [
+    {
+     "title": "Commands",
+     "required": null,
+     "notes": [],
+     "commands": [
+      {
+       "usages": [
+        "help [category]"
+       ],
+       "desc": "Show the help menu, or a single category."
+      },
+      {
+       "usages": [
+        "ping"
+       ],
+       "desc": "Show the bot's latency."
+      },
+      {
+       "usages": [
+        "prefix"
+       ],
+       "desc": "Show this server's prefix."
+      },
+      {
+       "usages": [
+        "prefix <new prefix>"
+       ],
+       "desc": "Change this server's prefix (needs Manage Server)."
+      },
+      {
+       "usages": [
+        "prefix reset"
+       ],
+       "desc": "Go back to the default prefix."
+      }
+     ]
+    },
+    {
+     "title": "Server whitelist (bot owner and `uwl` users)",
+     "required": null,
+     "notes": [
+      "The bot leaves any server that isn't whitelisted, or whose whitelist runs out. Servers it's already in get a lifetime whitelist automatically."
+     ],
+     "commands": [
+      {
+       "usages": [
+        "swl <server id> <time>"
+       ],
+       "desc": "Whitelist a server for a while (e.g. `7 days`, `12h`, `1 year`, `yearly`, or `lifetime`)."
+      },
+      {
+       "usages": [
+        "swl remove <server id>"
+       ],
+       "desc": "Remove a server's whitelist and leave it."
+      },
+      {
+       "usages": [
+        "swl list"
+       ],
+       "desc": "Show whitelisted servers."
+      }
+     ]
+    },
+    {
+     "title": "Music (join a voice channel first)",
+     "required": null,
+     "notes": [],
+     "commands": [
+      {
+       "usages": [
+        "play <name|link>"
+       ],
+       "desc": "Play a song or playlist from a name, YouTube, SoundCloud, Spotify or Apple Music link, or queue it (alias `p`)"
+      },
+      {
+       "usages": [
+        "pause",
+        "resume"
+       ],
+       "desc": "Pause or resume"
+      },
+      {
+       "usages": [
+        "skip"
+       ],
+       "desc": "Skip the song (alias `s`)"
+      },
+      {
+       "usages": [
+        "stop"
+       ],
+       "desc": "Stop and clear the queue"
+      },
+      {
+       "usages": [
+        "queue"
+       ],
+       "desc": "Show the queue (alias `q`)"
+      },
+      {
+       "usages": [
+        "nowplaying"
+       ],
+       "desc": "Show the current song (alias `np`)"
+      },
+      {
+       "usages": [
+        "loop [off|track|queue]"
+       ],
+       "desc": "Repeat the song or queue"
+      },
+      {
+       "usages": [
+        "shuffle"
+       ],
+       "desc": "Shuffle the queue"
+      },
+      {
+       "usages": [
+        "remove <position>"
+       ],
+       "desc": "Remove a song from the queue (alias `rm`)"
+      },
+      {
+       "usages": [
+        "clear"
+       ],
+       "desc": "Empty the queue"
+      },
+      {
+       "usages": [
+        "volume [0-100]"
+       ],
+       "desc": "Show or set the volume (alias `vol`)"
+      },
+      {
+       "usages": [
+        "join",
+        "leave"
+       ],
+       "desc": "Make me join or leave your voice channel (alias `dc`)"
+      }
+     ]
+    },
+    {
+     "title": "User whitelist",
+     "required": null,
+     "notes": [],
+     "commands": [
+      {
+       "usages": [
+        "uwl add <user>"
+       ],
+       "desc": "Let someone use the `swl` commands (bot owner only)."
+      },
+      {
+       "usages": [
+        "uwl remove <user>"
+       ],
+       "desc": "Take their access away (bot owner only)."
+      },
+      {
+       "usages": [
+        "uwl list"
+       ],
+       "desc": "Show who has access."
+      }
+     ]
+    }
+   ],
+   "count": 23
+  }
+ ]
+}
