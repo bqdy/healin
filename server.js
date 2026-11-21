@@ -9,10 +9,13 @@ const FILES = {
   "/": "index.html",
   "/index.html": "index.html",
   "/commands.json": "commands.json",
+  "/avatar.png": "avatar.png",
+  "/bot-avatar.png": "bot-avatar.png",
 };
 const TYPES = {
   ".html": "text/html; charset=utf-8",
   ".json": "application/json; charset=utf-8",
+  ".png": "image/png",
 };
 
 http
